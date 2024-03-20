@@ -36,7 +36,7 @@ public class BoundaryPrendreEtal {
 		StringBuilder chaine = new StringBuilder();
 		chaine.append("C'est parfait, il me reste un étal pour vous !\n");
 		chaine.append("Il me faudrait quelques renseignements :\n");
-		chaine.append("Quels produits souhaitez vous vendre\n");
+		chaine.append("Quels produits souhaitez vous vendre?\n");
 		System.out.println(chaine);
 		String produit = scan.next();
 		int nbProduit = Clavier.entrerEntier("Combien souhaitez vous en vendre ?\n");
