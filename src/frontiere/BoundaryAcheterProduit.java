@@ -26,6 +26,7 @@ public class BoundaryAcheterProduit {
 					+ "\nBonjour " + nomAcheteur + "\nCombien de " + produit + " voulez-vous acheter ?\n");
 			int quantite = scan.nextInt();
 			int quantiteAchete = controlAcheterProduit.acheterProduit(marchands[indiceVendeur], quantite);
+			System.out.println("Le vendeur possede "+ quantiteAchete + " " + produit + " .");
 			if (quantiteAchete == 0) {
 				System.out.println(nomAcheteur + " veut acheter " + quantite + " " + produit
 						+ ", malheureusement il n'y en a plus.\n");
@@ -36,6 +37,8 @@ public class BoundaryAcheterProduit {
 			} else {
 				System.out.println(
 						nomAcheteur + " achète " + quantiteAchete + " " + produit + " à " + marchands[indiceVendeur]);
+	            System.out.println("Quantité restante de " + produit + " chez " + marchands[indiceVendeur] + ": " + (quantiteAchete - quantite));
+
 			}
 		}
 	}
