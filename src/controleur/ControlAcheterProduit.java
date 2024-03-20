@@ -3,6 +3,7 @@ package controleur;
 import villagegaulois.Village;
 import personnages.Gaulois;
 import villagegaulois.Etal;
+import java.util.Scanner;
 
 
 public class ControlAcheterProduit {
@@ -22,6 +23,7 @@ public class ControlAcheterProduit {
 		Gaulois[] listeMarchands = village.rechercherVendeursProduit(produit);
 		StringBuilder chaine = new StringBuilder();
 		String[] marchands = null;
+		Scanner scanner = new Scanner(System.in);
 		if (listeMarchands == null) {
 			chaine.append("Désolé, personne ne vend ce produit au marché.\n");
 		} else {
@@ -36,6 +38,22 @@ public class ControlAcheterProduit {
 				chaine.append(listeMarchands[i].getNom());
 				marchands[i] = listeMarchands[i].getNom();
 			}
+			int choix = -1;
+            boolean choixValide = false;
+            while (!choixValide) {
+                System.out.print(chaine);
+                if (scanner.hasNextInt()) {
+                    choix = scanner.nextInt();
+                    if (choix >= 1 && choix <= listeMarchands.length) {
+                        choixValide = true;
+                    } else {
+                        System.out.println("Numéro invalide. Veuillez réessayer.");
+                    }
+                } else {
+                    System.out.println("Veuillez entrer un numéro valide.");
+                    scanner.next(); 
+                }
+            }
 		}
 		System.out.println(chaine);
 		return marchands;

@@ -166,7 +166,7 @@ public class TestControleursDesCas {
 //		3
 //		menhirs
 //		Asterix
-//		10
+//		10	
 //		poissons
 
 		// Cas 8 : Acheter produit
@@ -178,7 +178,7 @@ public class TestControleursDesCas {
 		System.out.println("Obelix a 3 menhir sur son etal");
 		int nbProduitAcheter = controlAcheterProduit.acheterProduit("Obelix",
 				2);
-		System.out.println("Achat de " + nbProduitAcheter + " menhirs sur 2");
+		System.out.println("Achat de " + nbProduitAcheter + " menhirs sur 3");
 		nbProduitAcheter = controlAcheterProduit.acheterProduit("Obelix", 3);
 		System.out.println("Achat de " + nbProduitAcheter + " menhirs sur 3");
 		
