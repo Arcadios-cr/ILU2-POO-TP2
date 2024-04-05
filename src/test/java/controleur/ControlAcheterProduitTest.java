@@ -39,7 +39,7 @@ class ControlAcheterProduitTest {
         village.ajouterHabitant(panoramix);
         controlPrendreEtal = new ControlPrendreEtal(controlVerifierIdentite, village);
         controlPrendreEtal.prendreEtal("asterix","Poisson",10);
-        controlPrendreEtal.prendreEtal("panoramix","fleurs",10);
+        controlPrendreEtal.prendreEtal("panoramix","Poisson",10);
     }
 
     @Test
